@@ -49,7 +49,6 @@ def registerPage(request):
             user.username = user.username.lower()
             user.email = user.email
             user.set_password(user.password)
-            print(user.username, user.password)
             user.save()
             login(request, user)
             return redirect('home')
